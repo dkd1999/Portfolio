@@ -27,7 +27,7 @@ body{
 @media only screen and (max-width:500px){
     
     #hel{
-        font-size: 45px!important;
+        font-size: 60px!important;
         margin-bottom: 10px;
     }
     #dev{
@@ -85,19 +85,15 @@ body{
         top: 50%;
     }
     .Skill-cards{
-        float: left; 
+        margin-left: 50px;
     }
     .Skill-bar{
+      height: 380vh;
         
     }
     .container-html{
-        width: 400px;
+  
     }
-    .Skill-cards{
-      float: left;
-      margin-left: 60px;
-      margin-bottom: 60px;  
-      }
     
 }
 .hom{
@@ -215,7 +211,7 @@ a{
     border-color: rgb(0, 0, 0);
     border: 3px solid;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-    color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0); 
   -webkit-transition: all 4s;
   transition: all 2s;
 
@@ -241,7 +237,8 @@ a{
 }
 #skhead{
   padding-top:30px ;
-  padding-bottom: 30px; 
+  padding-bottom: 30px;
+  font-size: 24px; 
 }
 .Skill-cards{
 float: left;
@@ -1019,6 +1016,16 @@ svg circle:nth-child(2)
   stroke-dashoffset:calc(440 - (440 * 76) / 100);
   stroke:#e44c30;
 }
-
+.about{
+  display: block;
+}
+#abhead{
+  font-size: 30px;
+  padding: 10px;
+}
+#aboutp{
+  padding: 20px;
+  font-size: 23px;
+}
 
 
