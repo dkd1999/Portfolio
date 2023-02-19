@@ -85,10 +85,13 @@ body{
         top: 50%;
     }
     .Skill-cards{
-        margin-left: 50px;
+        position: relative;
+        left: 13%;
+
     }
     .Skill-bar{
       height: 380vh;
+      position: relative;
         
     }
     .container-html{
