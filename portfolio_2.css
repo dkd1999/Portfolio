@@ -1,8 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@200;300;400;500;600&display=swap');
 *{
-    top: -150px;
+    top: 0;
     left: 0;
     margin: 0;
+    margin:0;
+    padding:0;
+}
+html{
+    scroll-behavior: smooth;
 }
 #head{
     position: relative;
@@ -18,18 +23,12 @@ body{
     background-position: center;
     background-size: cover;
     font-family: 'Lexend Deca', sans-serif;
-    padding: 150px;
 }
 @media only screen and (max-width:500px){
-    body{
-        width:170px ;
-        background-size:;
-    }
     
     #hel{
         font-size: 45px!important;
         margin-bottom: 10px;
-        margin-top: -100px !important;
     }
     #dev{
         font-size: 20px!important;
@@ -40,54 +39,70 @@ body{
     .social{
         font-size:14px;
     }
-    .socials{
-        margin-top: -20px;
-    }
-
     #stack{
-        margin-top: -380px;
         margin-bottom: 400px;
-        width: 180px;
-        display: flex;
-        justify-content: center;        
+        width: 200px;
+        height: 50px;
     }
     #stack h3{
         font-size: 15px;
         margin-top: -8px;
+        display: flex;
+        justify-content: center;        
+
     }
-    
     .drop-button{
         background: url("https://4kwallpapers.com/images/wallpapers/gradient-background-backdrop-multicolor-colorful-vibrant-2560x1440-6723.png");
         background-size: cover;
         height: 69px;
         margin-bottom: 200px;
+        transition:height 2s ease-in-out;
+
     }          
     .drop-content{
         display: none;
         margin-top: 20px;
+        margin-left: 50px;
         width: 80vw;
-        margin-left: -100px;
+        display: inline;
+        justify-content: center;
+        transition: 2s ease-in-out;
+
     } 
     .drop-button:hover + .drop-content{
-        display: flex;
+      
         height: 10px;
         transition:height 2s ease-in-out;
     }
     .drop-content img{
         height: 33px;
         margin: 8px;
+        display: inline;
+        justify-content: center;
     }
     .hom{
         height: 100vh;
+        position: relative;
+        top: 50%;
     }
-    .butt{
-        height: 300px;
+    .Skill-cards{
+        float: left;
+        margin-left: 62px;
+        
     }
+    .Skill-bar{
+        
+    }
+    .container-html{
+        width: 400px;
+    }
+    
 }
 .hom{
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
+    height: 100vh;
 }
 header{
     display: block;
@@ -96,7 +111,7 @@ header{
     transition: transform .5s ease;
 }
 #hel{
-    margin-top: 250px;
+    margin-top: 350px;
     font-size:60px ;
     text-align: center;
     font-weight: 500;
@@ -120,6 +135,7 @@ header{
     position: fixed;
     /* box-shadow:rgba(0, 0, 0, a0.35) 0px 5px 25px ; */
     box-shadow: 15px 15px 200px;
+    z-index: 5;
 }    
 .social{
     font-weight: 400;
@@ -139,6 +155,7 @@ header{
     overflow: hidden;
     display: block;
     align-items: center;
+   
 }
 
 #home img + #hide1{
@@ -182,25 +199,31 @@ header{
 a{
     text-decoration: none;
 }
-
-#stack{
+.drop-button{
+    background: url("https://4kwallpapers.com/images/wallpapers/gradient-background-backdrop-multicolor-colorful-vibrant-2560x1440-6723.png");
+    background-size: cover;
+    height: 69px;
     padding: 20px 34px 20px 34px;
     margin-bottom: 10px;
     border-radius: 40px 5px 40px 5px;
     font-size: 15px;
     font-family: 'Lexend Deca', sans-serif;
-
     font-weight:bolder;
     /* background-color: rgb(6, 155, 255); */
-    border-color: blue;
+    border-color: rgb(0, 0, 0);
+    border: 3px solid;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     color: rgb(0, 0, 0);
-}
+        -webkit-transition: all 1s;
+  transition: all 1s;
 
-.drop-button{
-    background: url("https://4kwallpapers.com/images/wallpapers/gradient-background-backdrop-multicolor-colorful-vibrant-2560x1440-6723.png");
-    background-size: cover;
-    height: 69px;
+}
+.drop-button:hover{
+    height: 90px;
+    font-size: 18px;
+    /* width: 250px; */
+    -webkit-transition: all .5s, background, 2s .5s linear;
+  transition: all .5s, background 2s .5s linear;
 }          
 .drop-content{
     display: none;
@@ -211,50 +234,663 @@ a{
     height: 10px;
     transition:height 2s ease-in-out;
 }
-#skill{
-    margin-top: 30vh;
+.heading{
+    
 }
-.bar-box{
-    position: relative;
-    /* relative for parent class */
-    /* use absolute for child inside parent class */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 0;
-    margin-bottom: 1rem;
+#skhead{
+    padding-bottom: 40px;
 }
-.bar-box h3,span{
-    font-size:1.1rem;
-    font-weight: 500;
+.Skill-cards{
+float: left;
+padding: 20px;   
 }
-.light-bar{
-    position: absolute;
-    width: 100%;
-    height: 0.5rem;
-    bottom: 0;
-    left: 0;
-    background-color: blueviolet;
-    border-radius: 30px;
+.Skill-bar h1{
+    font-size: 40px;
+    padding-bottom: 50px;
 }
-.percent-bar{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 0.5rem;
-    width: 100%;
-    background-color: chartreuse;
-    border-radius: 30px;
+/* html */
+*
+{
+ 
 }
-.html-bar{
-    width: 80%;
+/* body
+{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:100vh;} */
+.container-html
+{
+  position:relative;
+  width:260px;
+  display:flex;
+  justify-content:space-around;
 }
-.css-bar{
-    width: 87%;
+.container-html .card1
+{
+  position:relative;
+  width:250px;
+  background:linear-gradient(0deg,#1b1b1b,#222,#1b1b1b);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:300px;
+  border-radius:4px;
+  text-align:center;
+  overflow:hidden;
+  transition:0.5s;
+  border-radius: 60px;
 }
-.js-bar{
-    width:50%;
+.container-html .card1:hover
+{
+  transform:translateY(-10px);
+  box-shadow:0 15px 35px rgba(0,0,0,.5);
 }
-.react-bar{
-    width:40%;
+.container-html .card1:before
+{
+  content:'';
+  position:absolute;
+  top:0;
+  left:-50%;
+  width:100%;
+  height:100%;
+  background:rgba(255,255,255,.03);
+  pointer-events:none;
+  z-index:1;
 }
+.percent1
+{
+  position:relative;
+  width:150px;
+  height:150px;
+  border-radius:50%;
+  box-shadow: inset 0 0 50px #000;
+  background:#222;
+  z-index:1000;
+}
+.percent1 .num
+{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border-radius:50%;
+}
+.percent1 .num h2
+{
+  color:#777;
+  font-weight:700;
+  font-size:40px;
+  transition:0.5s;
+}
+.card1:hover .percent1 .num h2
+{
+  color:#fff;
+  font-size:60px;
+}
+.percent1 .num h2 span
+{
+  color:#777;
+  font-size:24px;
+  transition:0.5s;
+}
+.card1:hover .percent1 .num h2 span
+{
+  color:#fff;
+}
+.text
+{
+  position:relative;
+  color:#777;
+  margin-top:20px;
+  font-weight:700;
+  font-size:18px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  transition:0.5s;
+}
+.card1:hover .text
+{
+  color:#fff;
+}
+svg
+{
+  position:relative;
+  width:150px;
+  height:150px;
+  z-index:1000;
+}
+svg circle
+{
+  width:100%;
+  height:100%;
+  fill:none;
+  stroke:#191919;
+  stroke-width:10;
+  stroke-linecap:round;
+  transform:translate(5px,5px);
+}
+svg circle:nth-child(2)
+{
+  stroke-dasharray:440;
+  stroke-dashoffset:440;
+}
+.card1:nth-child(1) svg circle:nth-child(2)
+{
+  stroke-dashoffset:calc(440 - (440 * 90) / 100);
+  stroke:#00ff43;
+}
+
+/* css */
+.container-css
+{
+    position:relative;
+    width:260px;
+    margin-top: -20px;
+    display:flex;
+    justify-content:space-around;
+}
+.container-css .card2
+{
+    position:relative;
+    width:250px;
+    background:linear-gradient(0deg,#1b1b1b,#222,#1b1b1b);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:300px;
+    border-radius:4px;
+    text-align:center;
+    overflow:hidden;
+    transition:0.5s;
+    border-radius: 60px;
+  }
+.container-css .card2:hover
+{
+  transform:translateY(-10px);
+  box-shadow:0 15px 35px rgba(0,0,0,.5);
+}
+.container-css .card2:before
+{
+  content:'';
+  position:absolute;
+  top:0;
+  left:-50%;
+  width:100%;
+  height:100%;
+  background:rgba(255,255,255,.03);
+  pointer-events:none;
+  z-index:1;
+}
+.percent2
+{
+  position:relative;
+  width:150px;
+  height:150px;
+  border-radius:50%;
+  box-shadow: inset 0 0 50px #000;
+  background:#222;
+  z-index:1000;
+}
+.percent2 .num
+{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border-radius:50%;
+}
+.percent2 .num h2
+{
+  color:#777;
+  font-weight:700;
+  font-size:40px;
+  transition:0.5s;
+}
+.card2:hover .percent2 .num h2
+{
+  color:#fff;
+  font-size:60px;
+}
+.percent2 .num h2 span
+{
+  color:#777;
+  font-size:24px;
+  transition:0.5s;
+}
+.card2:hover .percent2 .num h2 span
+{
+  color:#fff;
+}
+.text
+{
+  position:relative;
+  color:#777;
+  margin-top:20px;
+  font-weight:700;
+  font-size:18px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  transition:0.5s;
+}
+.card2:hover .text
+{
+  color:#fff;
+}
+svg
+{
+  position:relative;
+  width:150px;
+  height:150px;
+  z-index:1000;
+}
+svg circle
+{
+  width:100%;
+  height:100%;
+  fill:none;
+  stroke:#191919;
+  stroke-width:10;
+  stroke-linecap:round;
+  transform:translate(5px,5px);
+}
+svg circle:nth-child(2)
+{
+  stroke-dasharray:440;
+  stroke-dashoffset:440;
+}
+.card2:nth-child(1) svg circle:nth-child(2)
+{
+  stroke-dashoffset:calc(440 - (440 * 87) / 100);
+  stroke:#00ff43;
+}
+/* Bootstrap */
+.container-bootstrap
+{
+    position:relative;
+    width:260px;
+    margin-top: -20px;
+    display:flex;
+    justify-content:space-around;
+}
+.container-bootstrap .card3
+{
+    position:relative;
+    width:250px;
+    background:linear-gradient(0deg,#1b1b1b,#1b1b1b,#1b1b1b);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:300px;
+    border-radius:4px;
+    text-align:center;
+    overflow:hidden;
+    transition:0.5s;
+    border-radius: 60px;
+  }
+.container-bootstrap .card3:hover
+{
+  transform:translateY(-10px);
+  box-shadow:0 15px 35px rgba(0,0,0,.5);
+}
+.container-bootstrap .card3:before
+{
+  content:'';
+  position:absolute;
+  top:0;
+  left:-50%;
+  width:100%;
+  height:100%;
+  background:rgba(255,255,255,.03);
+  pointer-events:none;
+  z-index:1;
+}
+.percent3
+{
+  position:relative;
+  width:150px;
+  height:150px;
+  border-radius:50%;
+  box-shadow: inset 0 0 50px #000;
+  background:#222;
+  z-index:1000;
+}
+.percent3 .num
+{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border-radius:50%;
+}
+.percent3 .num h2
+{
+  color:#777;
+  font-weight:700;
+  font-size:40px;
+  transition:0.5s;
+}
+.card3:hover .percent3 .num h2
+{
+  color:#fff;
+  font-size:60px;
+}
+.percent3 .num h2 span
+{
+  color:#777;
+  font-size:24px;
+  transition:0.5s;
+}
+.card3:hover .percent3 .num h2 span
+{
+  color:#fff;
+}
+.text
+{
+  position:relative;
+  color:#777;
+  margin-top:20px;
+  font-weight:700;
+  font-size:18px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  transition:0.5s;
+}
+.card3:hover .text
+{
+  color:#fff;
+}
+svg
+{
+  position:relative;
+  width:150px;
+  height:150px;
+  z-index:1000;
+}
+svg circle
+{
+  width:100%;
+  height:100%;
+  fill:none;
+  stroke:#191919;
+  stroke-width:10;
+  stroke-linecap:round;
+  transform:translate(5px,5px);
+}
+svg circle:nth-child(2)
+{
+  stroke-dasharray:440;
+  stroke-dashoffset:440;
+}
+.card3:nth-child(1) svg circle:nth-child(2)
+{
+  stroke-dashoffset:calc(440 - (440 * 87) / 100);
+  stroke:#00ff43;
+}
+/* javascript */
+.container-js
+{
+    position:relative;
+    width:260px;
+    margin-top: -20px;
+    display:flex;
+    justify-content:space-around;
+}
+.container-js .card4
+{
+    position:relative;
+    width:250px;
+    background:linear-gradient(0deg,#1b1b1b,#222,#1b1b1b);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:300px;
+    border-radius:4px;
+    text-align:center;
+    overflow:hidden;
+    transition:0.5s;
+    border-radius: 60px;
+  }
+.container-js .card4:hover
+{
+  transform:translateY(-10px);
+  box-shadow:0 15px 35px rgba(0,0,0,.5);
+}
+.container-js .card4:before
+{
+  content:'';
+  position:absolute;
+  top:0;
+  left:-50%;
+  width:100%;
+  height:100%;
+  background:rgba(255,255,255,.03);
+  pointer-events:none;
+  z-index:1;
+}
+.percent4
+{
+  position:relative;
+  width:150px;
+  height:150px;
+  border-radius:50%;
+  box-shadow: inset 0 0 50px #000;
+  background:#222;
+  z-index:1000;
+}
+.percent4 .num
+{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border-radius:50%;
+}
+.percent4 .num h2
+{
+  color:#777;
+  font-weight:700;
+  font-size:40px;
+  transition:0.5s;
+}
+.card4:hover .percent4 .num h2
+{
+  color:#fff;
+  font-size:60px;
+}
+.percent4 .num h2 span
+{
+  color:#777;
+  font-size:24px;
+  transition:0.5s;
+}
+.card4:hover .percent4 .num h2 span
+{
+  color:#fff;
+}
+.text
+{
+  position:relative;
+  color:#777;
+  margin-top:20px;
+  font-weight:700;
+  font-size:18px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  transition:0.5s;
+}
+.card4:hover .text
+{
+  color:#fff;
+}
+svg
+{
+  position:relative;
+  width:150px;
+  height:150px;
+  z-index:1000;
+}
+svg circle
+{
+  width:100%;
+  height:100%;
+  fill:none;
+  stroke:#191919;
+  stroke-width:10;
+  stroke-linecap:round;
+  transform:translate(5px,5px);
+}
+svg circle:nth-child(2)
+{
+  stroke-dasharray:440;
+  stroke-dashoffset:440;
+}
+.card4:nth-child(1) svg circle:nth-child(2)
+{
+  stroke-dashoffset:calc(440 - (440 * 87) / 100);
+  stroke:#00ff43;
+}
+/* Node */
+.container-node
+{
+    position:relative;
+    width:260px;
+    margin-top: -20px;
+    display:flex;
+    justify-content:space-around;
+}
+.container-node .card5
+{
+    position:relative;
+    width:250px;
+    background:linear-gradient(0deg,#1b1b1b,#222,#1b1b1b);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:300px;
+    border-radius:4px;
+    text-align:center;
+    overflow:hidden;
+    transition:0.5s;
+    border-radius: 60px;
+  }
+.container-node .card5:hover:hover
+{
+  transform:translateY(-10px);
+  box-shadow:0 15px 35px rgba(0,0,0,.5);
+}
+.container-node .card5:before
+{
+  content:'';
+  position:absolute;
+  top:0;
+  left:-50%;
+  width:100%;
+  height:100%;
+  background:rgba(255,255,255,.03);
+  pointer-events:none;
+  z-index:1;
+}
+.percent5
+{
+  position:relative;
+  width:150px;
+  height:150px;
+  border-radius:50%;
+  box-shadow: inset 0 0 50px #000;
+  background:#222;
+  z-index:1000;
+}
+.percent5 .num
+{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border-radius:50%;
+}
+.percent5 .num h2
+{
+  color:#777;
+  font-weight:700;
+  font-size:40px;
+  transition:0.5s;
+}
+.card5:hover .percent5.num h2
+{
+  color:#fff;
+  font-size:60px;
+}
+.percent5 .num h2 span
+{
+  color:#777;
+  font-size:24px;
+  transition:0.5s;
+}
+.card5:hover .percent5 .num h2 span
+{
+  color:#fff;
+}
+.text
+{
+  position:relative;
+  color:#777;
+  margin-top:20px;
+  font-weight:700;
+  font-size:18px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  transition:0.5s;
+}
+.card5:hover .text
+{
+  color:#fff;
+}
+svg
+{
+  position:relative;
+  width:150px;
+  height:150px;
+  z-index:1000;
+}
+svg circle
+{
+  width:100%;
+  height:100%;
+  fill:none;
+  stroke:#191919;
+  stroke-width:10;
+  stroke-linecap:round;
+  transform:translate(5px,5px);
+}
+svg circle:nth-child(2)
+{
+  stroke-dasharray:440;
+  stroke-dashoffset:440;
+}
+.card5:nth-child(1) svg circle:nth-child(2)
+{
+  stroke-dashoffset:calc(440 - (440 * 87) / 100);
+  stroke:#00ff43;
+}
+
